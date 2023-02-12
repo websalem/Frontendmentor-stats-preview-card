@@ -1,0 +1,156 @@
+.card {
+    background-color: $dark-desaturated-blue-card-bg;
+    border-radius: 20px;
+}
+
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $soft-violet;
+    mix-blend-mode: multiply;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.hero-text {
+    padding: 35px 20px;
+}
+
+.hero-text h1 {
+    color: $white;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    letter-spacing: .5px;
+}
+
+.hero-text h1 span {
+    color: $soft-violet;
+}
+
+.hero-text p {
+    color: $slightly-transparent-white-stat-headings;
+    text-align: center;
+}
+
+.statistics p {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    font-size: 22px;
+    font-family: 'lexend';
+    text-transform: uppercase;
+    padding-bottom: 20px;
+
+}
+
+.statistic {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.75;
+    font-weight: 700;
+}
+
+.statistic:first-child {
+    padding: 0;
+}
+
+.statistic span {
+    font-size: .75rem;
+    color: $slightly-transparent-white-stat-headings;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+@media screen and (min-width: '375px') {
+    .card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-content: center;
+        align-items: center;
+    }
+
+    .hero-image {
+        order: 2;
+    }
+
+    .hero-text h1 {
+        color: $white;
+        text-align: left;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        letter-spacing: .5px;
+    }
+
+    .statistics {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        line-height: 1.75;
+        font-weight: 700;
+    }
+
+    .statistic:first-child {
+        padding: 10px;
+    }
+
+    .statistic {
+        padding: 10px;
+    }
+
+    .hero-text {
+        padding: 0 90px;
+    }
+
+    .hero-text p {
+        color: $slightly-transparent-white-stat-headings;
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+
+    .statistic p {
+        margin-bottom: 0;
+        color: $white;
+    }
+
+    .card img {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 10px;
+        position: relative;
+    }
+
+    .hero-image {
+        position: relative;
+    }
+
+    .hero-image::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $soft-violet;
+        mix-blend-mode: multiply;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}

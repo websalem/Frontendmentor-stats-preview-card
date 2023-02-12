@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'lexend';
+    background-color: $very-dark-blue-main-bg;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+
+}
+
+h1 {
+    font-family: 'inter';
+    font-size: 2rem;
+}
+
+p {
+    line-height: 1.75;
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 1rem;
+    margin: auto;
+}
